@@ -2,6 +2,13 @@ const express = require('express')
 const path = require('path')
 const app = express()
 
+const Rollbar = require('rollbar')
+const rollbar = new Rollbar({
+  accessToken: 'de9ec934266f4a9881098fe227981b8d',
+  captureUncaught: true,
+  captureUnhandledRejections: true
+})
+
 app.use(express.json())
 
 app.get('/', function(req, res) {
