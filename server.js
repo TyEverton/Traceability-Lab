@@ -15,15 +15,15 @@ app.use("/styles.css", express.static(path.join(__dirname, '/public/styles.css')
 
 app.get('/', function(req, res) {
   rollbar.log('Hello, I am Rolllbar!')
-  res.sendFile(path.join(__dirname, '/public/index.html'))
-
+ 
   try{ 
     fakeFunction() 
   } catch (err){
     rollbar.error(err)
     return res.sendStatus(400)
   }
- 
+  res.sendFile(path.join(__dirname, '/public/index.html'))
+
 })
 
 
