@@ -19,7 +19,7 @@ app.get('/', function(req, res) {
 
 })
 
-app.get( greeting() {
+app.get('/', greeting('hello') {
 
 })
 
