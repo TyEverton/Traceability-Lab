@@ -18,7 +18,7 @@ app.use(cors())
 
 app.use("/styles.css", express.static(path.join(__dirname, '/public/styles.css')))
 
-app.get('/api/compliment', function (req, res) {
+app.get("/api/compliment", function (req, res) {
   const compliments = ["Nice shirt!", "Dang, you cook real good!", "Sweet shoes!"]
 
   let randomIndex = Math.floor(Math.random() * compliments.length)
