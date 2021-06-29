@@ -1,6 +1,9 @@
 const express = require('express')
 const path = require('path')
 const app = express()
+const cors = require('cors')
+
+
 
 const Rollbar = require('rollbar')
 const rollbar = new Rollbar({
@@ -10,6 +13,8 @@ const rollbar = new Rollbar({
 })
 
 app.use(express.json())
+
+app.use(cors())
 
 app.use("/styles.css", express.static(path.join(__dirname, '/public/styles.css')))
 
