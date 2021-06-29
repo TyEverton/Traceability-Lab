@@ -16,11 +16,7 @@ app.use("/styles.css", express.static(path.join(__dirname, '/public/styles.css')
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, '/public/index.html'))
 
-  getQuerySubmit.addEventListener('click', () => {
-    axios
-        .get(http://localhost:5050/api/inventory?item=$%7BqueryInput.value%7D)
-        .then(res => addToView(res.data))
-  })
+  fakeFunction()
 })
 
 
