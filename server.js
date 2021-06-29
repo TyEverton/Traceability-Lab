@@ -19,8 +19,8 @@ app.get('/', function(req, res) {
 
 })
 
-app.get('/', function() {
-  
+app.get( greeting() {
+
 })
 
 const port = process.env.PORT || 4545
