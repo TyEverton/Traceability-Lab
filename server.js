@@ -18,5 +18,6 @@ app.get('/', function(req, res) {
 const port = process.env.PORT || 4545
 
 app.listen(port, function() {
+  rollbar.log('Hello, I am Rolllbar!')
   console.log(`Server is blaring the bumps on ${port}`)
 })
