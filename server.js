@@ -19,7 +19,11 @@ app.get('/', function(req, res) {
 
 })
 
-
+getQuerySubmit.addEventListener('click', () => {
+  axios
+      .get(http://localhost:5050/api/inventory?item=$%7BqueryInput.value%7D)
+      .then(res => addToView(res.data))
+});
 
 const port = process.env.PORT || 4545
 
