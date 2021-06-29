@@ -8,13 +8,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="container">
-  <button id="complimentButton">Free Virtual Hug Here</button>
-</body>
-<body>
+<body >
+  
+
   <h1>TEST</h1>
+  <button id="complimentButton">Free Virtual Hug Here</button>
   <script>
-    
+
     document.getElementById("complimentButton").onclick = function () {
       axios.get("http://localhost:4545/api/compliment/")
       .then(function (response) {
