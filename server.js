@@ -15,6 +15,12 @@ app.use("/styles.css", express.static(path.join(__dirname, '/public/styles.css')
 
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, '/public/index.html'))
+
+
+})
+
+app.get('/', function() {
+  
 })
 
 const port = process.env.PORT || 4545
