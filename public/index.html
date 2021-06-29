@@ -18,7 +18,7 @@
     document.getElementById("complimentButton").onclick = function () {
       axios.get("http://localhost:4545/api/compliment/")
       .then(function (response) {
-        const data = response
+        const data = response.data
         alert(data)
       })
     }
