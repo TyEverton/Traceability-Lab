@@ -20,7 +20,8 @@ app.get('/', function(req, res) {
     fakeFunction() 
   } catch (err){
     console.log(err)
-    rollbar.critical(err)
+    rollbar.error(err)
+    Rollbar.critical('Crash here')
     return res.sendStatus(400)
   }
   res.sendFile(path.join(__dirname, '/public/index.html'))
