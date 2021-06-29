@@ -20,11 +20,15 @@ app.get('/', function(req, res) {
     fakeFunction() 
   } catch (err){
     console.log(err)
+    rollbar.error(err)
     rollbar.critical('freaking error here')
+    rollbar.warning('heres your freaking warning bud')
   }
   res.sendFile(path.join(__dirname, '/public/index.html'))
 
 })
+
+
 
 
 
